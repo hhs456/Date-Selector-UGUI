@@ -40,6 +40,9 @@ public class DateSelector: MonoBehaviour {
 
     private readonly Color gray = new Color(0.9f, 0.9f, 0.9f, 1.0f);
 
+    public event Action<DateTime> DateSelectorUdate;
+
+
     void Start() {
 
         current = this;
@@ -142,6 +145,7 @@ public class DateSelector: MonoBehaviour {
             CurrentDate = PickingDate;
             UpdateLabelDateText();            
             Debug.Log("Change Date");
+            DateSelectorUdate?.Invoke(CurrentDate);
         }
         Debug.Log("Pick End");
     }
