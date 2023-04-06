@@ -21,7 +21,7 @@ To use the DateSelector component, simply add the `DateSelector` script to a Gam
 1. Load the `Date Selector` Scene.
 2. Press `Play` to start.
 
-![alt text][Sprites/Date-Selector.gif](https://github.com/hhs456/Date-Selector-UGUI/blob/main/Sprites/Date-Selector.gif)
+![Date-Selector](https://github.com/hhs456/Date-Selector-UGUI/blob/main/Sprites/Date-Selector.gif)
 
 ## License
 
