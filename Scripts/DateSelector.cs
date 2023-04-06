@@ -42,6 +42,11 @@ public class DateSelector: MonoBehaviour {
 
     public event Action<DateTime> DateSelectorUdate;
 
+    private void OnValidate() {
+        dropdown = GetComponent<Dropdown>();
+        dropdown.options = new List<Dropdown.OptionData>();
+        dropdown.options.AddRange(new Dropdown.OptionData[42]);
+    }
 
     void Start() {
 
@@ -50,7 +55,7 @@ public class DateSelector: MonoBehaviour {
         // Dropdown Init
         dropdown = GetComponent<Dropdown>();
         dropdown.options = new List<Dropdown.OptionData>();
-        dropdown.options.AddRange(new Dropdown.OptionData[42]);
+        dropdown.options.AddRange(new Dropdown.OptionData[42]);        
 
         // DateTime Init
         CurrentDate = DateTime.Now;
@@ -58,7 +63,7 @@ public class DateSelector: MonoBehaviour {
         dateTextOnDropdown.text = string.Format("{0:D3}/{1:D2}/{2:D2}", CurrentDate.Year - 1911, CurrentDate.Month, CurrentDate.Day);
 
         // Initial value
-        UpdateDropdownOptions();
+        UpdateDropdownOptions();        
 
         // Add event listener
         dropdown.onValueChanged.AddListener(new UnityAction<int>(OnOptionValueUpdate));
