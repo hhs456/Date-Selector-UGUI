@@ -18,9 +18,10 @@ To use the DateSelector component, simply add the `DateSelector` script to a Gam
 
 ## Usage
 
-1. Add the `DateSelector` script to a GameObject.
-2. Customize the component as needed using the inspector.
-3. Attach event listeners to the `OnOptionValueUpdate` and `OnPickEnd` events to handle changes made to the date picker.
+1. Load the `Date Selector` Scene.
+2. Press `Play` to start.
+
+![alt text]Sprites/Date-Selector.gif
 
 ## License
 
